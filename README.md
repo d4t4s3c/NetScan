@@ -9,15 +9,13 @@ Speed scanner, ports status: open (NETCAT)
 
 **Run:**
 ```
-root@kali:~# git clone https://github.com/d4t4s3c/SMBploit.git
+root@kali:~# git clone https://github.com/d4t4s3c/NetScan.git
 
-root@kali:~# cd SMBploit
+root@kali:~# cd NetScan
 
-root@kali:~# chmod +x *.sh
+root@kali:~# chmod +x NetScan.sh
 
-root@kali:~# ./install.sh
-
-root@kali:~# ./SMBploit.sh
+root@kali:~# ./NetScan
 ```
 
 

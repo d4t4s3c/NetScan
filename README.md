@@ -1,6 +1,8 @@
 # NetScan
 Speed scanner, ports status: open (NETCAT)
 
+# ONLY USE FOR EDUCATIONAL PURPOSES
+
 **Screenshot**
 
 ![](/screenshot/1.png)

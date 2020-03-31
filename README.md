@@ -20,6 +20,5 @@ root@kali:~# chmod +x NetScan.sh
 root@kali:~# ./NetScan
 ```
 
-
 # NOT BE BAD
 

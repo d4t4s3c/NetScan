@@ -60,7 +60,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	      echo -e "$a$c$nc"
 	      echo ""
     elif [ $opc -eq 2 ]; then
-        echo ""
+              echo ""
 	      echo -e "$a$z$nc"
 	      echo ""
 	      read ip
@@ -75,20 +75,20 @@ read -p " $(echo -e $v$shell $nc)" opc
 	      echo ""
 	      echo ""
 	      echo -e "$a        |\/\/\/|"
-        echo -e "        |      |" 
-        echo -e "        |      |" 
-        echo -e "        | (o)(o) " 
-        echo -e "        C      _) "
-        echo -e "         | ,___|  "
-        echo -e "         |   /    "
-        echo -e "        /____\ "
-        echo -e "       /      \ $nc"
-        echo -e "$b#### $v BYE $v HACKER $b ####"
-        echo ""
-        echo ""
+              echo -e "        |      |" 
+              echo -e "        |      |" 
+              echo -e "        | (o)(o) " 
+              echo -e "        C      _) "
+              echo -e "         | ,___|  "
+              echo -e "         |   /    "
+              echo -e "        /____\ "
+              echo -e "       /      \ $nc"
+              echo -e "$b#### $v BYE $v HACKER $b ####"
+              echo ""
+              echo ""
 	      sleep 3
 	      exit
-        else
+    else
 	      echo ""
 	      echo -e "$a invalid option $nc"
 	      echo ""

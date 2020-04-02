@@ -16,6 +16,7 @@ shell=">"
 n1=1
 n2=2
 n3=3
+n4=4
 z="IP?"
 x="Scan IP:"
 c="Scan Completed"
@@ -37,9 +38,10 @@ function banner(){
 }
 
 function main(){
-        echo -e "$b[$v$n1$b] TCP All Open Ports (1-65535)"
-        echo -e "$b[$v$n2$b] TCP Popular Open Ports"                  
-        echo -e "$b[$v$n3$b] Exit"
+        echo -e "$b[$v$n1$b] Scan All Ports (1-65535)"
+        echo -e "$b[$v$n2$b] Scan Only Important Ports"
+        echo -e "$b[$v$n3$b] Scan Basic (1-5000)"                
+        echo -e "$b[$v$n4$b] Exit"
         echo ""
 }
 
@@ -47,55 +49,67 @@ function menu(){
 
 read -p " $(echo -e $v$shell $nc)" opc
 
-    if [ $opc -eq 1 ]; then
-	      echo ""
-	      echo -e "$a$z$nc"
-	      echo ""
-	      read ip
-	      echo ""
-	      echo -e "$a$x$v $ip $nc"
-	      echo ""
-	      nc -vz -w 1 -n $ip 1-65535
-	      echo ""
-	      echo -e "$a$c$nc"
-	      echo ""
+   if [ $opc -eq 1 ]; then
+	 echo ""
+	 echo -e "$a$z$nc"
+	 echo ""
+	 read ip
+	 echo ""
+	 echo -e "$a$x$v $ip $nc"
+	 echo ""
+	 nc -vz -w 1 -n $ip 1-65535
+	 echo ""
+	 echo -e "$a$c$nc"
+	 echo ""
     elif [ $opc -eq 2 ]; then
-              echo ""
-	      echo -e "$a$z$nc"
-	      echo ""
-	      read ip
-	      echo ""
-	      echo -e "$a$x$v $ip $nc"
-	      echo ""
-	      nc -vz -w 1 -n $ip 21 22 23 53 80 88 109 110 137 138 139 443 445 3389
-	      echo ""
-	      echo -e "$a$c$nc"
-	      echo ""
+         echo ""
+	 echo -e "$a$z$nc"
+	 echo ""
+	 read ip
+	 echo ""
+	 echo -e "$a$x$v $ip $nc"
+	 echo ""
+	 nc -vz -w 1 -n $ip 21 22 23 53 80 88 109 110 137 138 139 443 445 3389
+	 echo ""
+	 echo -e "$a$c$nc"
+	 echo ""
     elif [ $opc -eq 3 ]; then
-	      echo ""
-	      echo ""
-	      echo -e "$a        |\/\/\/|"
-              echo -e "        |      |" 
-              echo -e "        |      |" 
-              echo -e "        | (o)(o) " 
-              echo -e "        C      _) "
-              echo -e "         | ,___|  "
-              echo -e "         |   /    "
-              echo -e "        /____\ "
-              echo -e "       /      \ $nc"
-              echo -e "$b#### $v BYE $v HACKER $b ####"
-              echo ""
-              echo ""
-	      sleep 3
-	      exit
+         echo ""
+         echo -e "$a$z$nc"
+         echo ""
+         read ip
+         echo ""
+         echo -e "$a$x$v $ip $nc"
+         echo ""
+         nc -vz -w 1 -n $ip 1-5000
+         echo ""
+         echo -e "$a$c$nc"
+         echo ""
+    elif [ $opc -eq 4 ]; then
+	 echo ""
+	 echo ""
+	 echo -e "$a        |\/\/\/|"
+         echo -e "        |      |" 
+         echo -e "        |      |" 
+         echo -e "        | (o)(o) " 
+         echo -e "        C      _) "
+         echo -e "         | ,___|  "
+         echo -e "         |   /    "
+         echo -e "        /____\ "
+         echo -e "       /      \ $nc"
+         echo -e "$b#### $v BYE $v HACKER $b ####"
+         echo ""
+         echo ""
+	 sleep 3
+	 exit
     else
-	      echo ""
-	      echo -e "$a invalid option $nc"
-	      echo ""
-	      sleep 4
-	      banner
-	      main
-	      menu
+	 echo ""
+	 echo -e "$a invalid option $nc"
+	 echo ""
+	 sleep 4
+	 banner
+	 main
+	 menu
     fi
 }
 

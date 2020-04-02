@@ -5,9 +5,9 @@ Speed scanner, ports status: open (NETCAT)
 
 **Screenshot**
 
-![](/screenshot/1.png)
+![](/screenshot/01.png)
 
-![](/screenshot/2.png)
+![](/screenshot/02.png)
 
 **Run:**
 ```

@@ -9,6 +9,7 @@ b="\033[1;37m"
 r="\033[1;31m"
 v="\033[1;32m"
 a="\033[1;33m"
+cy="\033[0;96m"
 nc="\e[0m"
 
 #var
@@ -56,36 +57,36 @@ read -p " $(echo -e $v$shell $nc)" opc
 	 read ip
 	 echo ""
 	 echo -e "$a$x$v $ip $nc"
-	 echo ""
-	 nc -vz -w 1 -n $ip 1-65535
-	 echo ""
+         echo -e "$cy"
+	 nmap -n -Pn -p- --min-rate 5000 $ip | grep "open"
+	 echo -e "$nc"
 	 echo -e "$a$c$nc"
 	 echo ""
-    elif [ $opc -eq 2 ]; then
+   elif [ $opc -eq 2 ]; then
          echo ""
 	 echo -e "$a$z$nc"
 	 echo ""
 	 read ip
 	 echo ""
 	 echo -e "$a$x$v $ip $nc"
-	 echo ""
-	 nc -vz -w 1 -n $ip 21 22 23 53 80 88 109 110 137 138 139 443 445 3389
-	 echo ""
+	 echo -e "$cy"
+	 nmap -n -Pn -p 21,22,23,53,80,88,109,110,137,138,139,443,445,3389 --min-rate 5000 $ip | grep "open"
+	 echo -e "$nc"
 	 echo -e "$a$c$nc"
 	 echo ""
-    elif [ $opc -eq 3 ]; then
+   elif [ $opc -eq 3 ]; then
          echo ""
          echo -e "$a$z$nc"
          echo ""
          read ip
          echo ""
          echo -e "$a$x$v $ip $nc"
-         echo ""
-         nc -vz -w 1 -n $ip 1-5000
-         echo ""
+         echo -e "$cy"
+         nmap -n -Pn -p 1-5000 --min-rate 5000 $ip | grep "open"
+         echo -e "$nc"
          echo -e "$a$c$nc"
          echo ""
-    elif [ $opc -eq 4 ]; then
+   elif [ $opc -eq 4 ]; then
 	 echo ""
 	 echo ""
 	 echo -e "$a        |\/\/\/|"

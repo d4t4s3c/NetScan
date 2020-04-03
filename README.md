@@ -1,13 +1,13 @@
 # NetScan
-Speed scanner, ports status: open (NETCAT)
+Speed scanner, ports status: open (Nmap)
 
 # ONLY USE FOR EDUCATIONAL PURPOSES
 
 **Screenshot**
 
-![](/screenshot/01.png)
+![](/screenshot/1.png)
 
-![](/screenshot/02.png)
+![](/screenshot/2.png)
 
 **Run:**
 ```

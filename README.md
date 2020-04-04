@@ -9,7 +9,7 @@ Rapid Scanner, ARP + Ports Status: Open
 
 **Scan ARP**
 
-![](/screenshot/0022.png)
+![](/screenshot/A2.png)
 
 **Scan Ports**
 

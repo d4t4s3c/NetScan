@@ -18,9 +18,11 @@ n1=1
 n2=2
 n3=3
 n4=4
+n5=5
 z="IP?"
 x="Scan IP:"
 c="Scan Completed"
+w="Scan ARP"
 
 function banner(){
         echo ""
@@ -39,18 +41,26 @@ function banner(){
 }
 
 function main(){
-        echo -e "$b[$v$n1$b] Scan All Ports (1-65535)"
-        echo -e "$b[$v$n2$b] Scan Only Important Ports"
-        echo -e "$b[$v$n3$b] Scan Basic (1-5000)"                
-        echo -e "$b[$v$n4$b] Exit"
+        echo -e "$b[$v$n1$b] Scan ARP   $cy(Active IPs)$nc"
+        echo -e "$b[$v$n2$b] Scan Ports $cy(All 1-65535)$nc"
+        echo -e "$b[$v$n3$b] Scan Ports $cy(Top)$nc"
+        echo -e "$b[$v$n4$b] Scan Ports $cy(Basic 1-5000)$nc"                
+        echo -e "$b[$v$n5$b] Exit"
         echo ""
 }
 
 function menu(){
 
 read -p " $(echo -e $v$shell $nc)" opc
-
    if [ $opc -eq 1 ]; then
+         echo ""
+         echo -e "$a$w$v $ip $nc"
+         echo -e "$cy"
+         arp-scan -l | grep "192"
+         echo -e "$nc"
+         echo -e "$a$c$nc"
+         echo ""
+   elif [ $opc -eq 2 ]; then
 	 echo ""
 	 echo -e "$a$z$nc"
 	 echo ""
@@ -62,7 +72,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	 echo -e "$nc"
 	 echo -e "$a$c$nc"
 	 echo ""
-   elif [ $opc -eq 2 ]; then
+    elif [ $opc -eq 3 ]; then
          echo ""
 	 echo -e "$a$z$nc"
 	 echo ""
@@ -74,7 +84,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	 echo -e "$nc"
 	 echo -e "$a$c$nc"
 	 echo ""
-   elif [ $opc -eq 3 ]; then
+    elif [ $opc -eq 4 ]; then
          echo ""
          echo -e "$a$z$nc"
          echo ""
@@ -86,7 +96,7 @@ read -p " $(echo -e $v$shell $nc)" opc
          echo -e "$nc"
          echo -e "$a$c$nc"
          echo ""
-   elif [ $opc -eq 4 ]; then
+    elif [ $opc -eq 5 ]; then
 	 echo ""
 	 echo ""
 	 echo -e "$a        |\/\/\/|"

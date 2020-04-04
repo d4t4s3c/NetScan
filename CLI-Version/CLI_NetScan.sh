@@ -40,29 +40,29 @@ read -p " $(echo -e $v$shell $nc)" opc
         arp-scan -l | grep "192"
         echo -e "$nc"
     elif [ $opc -eq 2 ]; then
-	      echo ""
-	      echo -e "$a$z$nc"
-	      echo ""
-	      read ip
-	      echo ""
-	      echo -e "$a$x$v $ip $nc"
+	echo ""
+	echo -e "$a$z$nc"
+	echo ""
+	read ip
+	echo ""
+	echo -e "$a$x$v $ip $nc"
         echo -e "$cy"
-	      nmap -n -Pn -p- --min-rate 5000 $ip | grep "open"
-	      echo -e "$nc"
-	      echo -e "$a$c$nc"
-	      echo ""
+	nmap -n -Pn -p- --min-rate 5000 $ip | grep "open"
+	echo -e "$nc"
+	echo -e "$a$c$nc"
+	echo ""
     elif [ $opc -eq 3 ]; then
         echo ""
-	      echo -e "$a$z$nc"
-	      echo ""
-	      read ip
-	      echo ""
-	      echo -e "$a$x$v $ip $nc"
-	      echo -e "$cy"
-	      nmap -n -Pn -p 21,22,23,53,80,88,109,110,137,138,139,443,445,3389 --min-rate 5000 $ip | grep "open"
-	      echo -e "$nc"
-	      echo -e "$a$c$nc"
-	      echo ""
+	echo -e "$a$z$nc"
+	echo ""
+	read ip
+	echo ""
+	echo -e "$a$x$v $ip $nc"
+	echo -e "$cy"
+	nmap -n -Pn -p 21,22,23,53,80,88,109,110,137,138,139,443,445,3389 --min-rate 5000 $ip | grep "open"
+	echo -e "$nc"
+	echo -e "$a$c$nc"
+	echo ""
     elif [ $opc -eq 4 ]; then
         echo ""
         echo -e "$a$z$nc"
@@ -77,14 +77,14 @@ read -p " $(echo -e $v$shell $nc)" opc
         echo ""
     elif [ $opc -eq 5 ]; then
         echo ""
-	      exit
+	exit
         echo ""
     else
         echo ""
-	      echo -e "$a$in$nc"
+	echo -e "$a$in$nc"
         sleep 2
-	    main
-	    menu
+	main
+	menu
     fi
 }
 main

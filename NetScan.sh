@@ -53,6 +53,7 @@ function main(){
 function menu(){
 
 read -p " $(echo -e $v$shell $nc)" opc
+
    if [ $opc -eq 1 ]; then
          echo ""
          echo -e "$a$w$v $ip $nc"

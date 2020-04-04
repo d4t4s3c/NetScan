@@ -23,6 +23,7 @@ z="IP?"
 x="Scan IP:"
 c="Scan Completed"
 w="Scan ARP"
+in="Invalid Option"
 
 function banner(){
         echo ""

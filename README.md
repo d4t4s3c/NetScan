@@ -5,9 +5,15 @@ Rapid scanner, ports status: open
 
 **Screenshot**
 
-![](/screenshot/1.png)
+![](/screenshot/001.png)
 
-![](/screenshot/2.png)
+**Scan ARP**
+
+![](/screenshot/002.png)
+
+**Scan Ports**
+
+![](/screenshot/002.png)
 
 **Run:**
 ```

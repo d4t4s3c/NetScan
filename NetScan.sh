@@ -116,9 +116,9 @@ read -p " $(echo -e $v$shell $nc)" opc
 	 exit
     else
 	 echo ""
-	 echo -e "$a invalid option $nc"
+	 echo -e "$a$in$nc"
 	 echo ""
-	 sleep 4
+	 sleep 2
 	 banner
 	 main
 	 menu

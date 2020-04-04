@@ -15,6 +15,10 @@ Rapid scanner, ports status: open
 
 ![](/screenshot/002.png)
 
+**CLI Version**
+
+![](/screenshot/044.png)
+
 **Run:**
 ```
 root@kali:~# git clone https://github.com/d4t4s3c/NetScan.git

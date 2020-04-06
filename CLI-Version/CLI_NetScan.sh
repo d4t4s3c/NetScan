@@ -37,7 +37,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 
     if [ $opc -eq 1 ]; then
         echo -e "$cy"
-        arp-scan -l | grep "192"
+        arp-scan -l
         echo -e "$nc"
     elif [ $opc -eq 2 ]; then
 	echo ""

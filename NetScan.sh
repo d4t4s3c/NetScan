@@ -58,7 +58,7 @@ read -p " $(echo -e $v$shell $nc)" opc
          echo ""
          echo -e "$a$w$v $ip $nc"
          echo -e "$cy"
-         arp-scan -l | grep "192"
+         arp-scan -l
          echo -e "$nc"
          echo -e "$a$c$nc"
          echo ""

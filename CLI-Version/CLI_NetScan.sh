@@ -27,7 +27,7 @@ in="Invalid Option"
 
 function main(){
         echo ""
-        echo -e "$b[$v$n1$b] Scan ARP $cy(Active IPs) $a* $b[$v$n2$b] Scan Ports $cy(All 1-65535) $a* $b[$v$n3$b] Scan Ports $cy(Top) $a* $b[$v$n4$b] Scan Ports $cy(Basic 1-5000) $a* $b[$v$n5$b] Exit $nc"
+        echo -e "$b[$v$n1$b] Scan ARP $cy(Active IPs) $a* $b[$v$n2$b] Scan Ports $cy(All 1-65535) $a* $b[$v$n3$b] Scan Ports $cy(Popular Ports) $a* $b[$v$n4$b] Scan Ports $cy(Basic 1-5000) $a* $b[$v$n5$b] Exit $nc"
         echo ""
 }
 
@@ -37,7 +37,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 
     if [ $opc -eq 1 ]; then
         echo -e "$cy"
-        arp-scan -l
+        arp-scan -l | grep -v "Interface:" | grep -v "Starting" | grep -v "packets" | grep -v "Ending" | awk '{print $1}'
         echo -e "$nc"
     elif [ $opc -eq 2 ]; then
 	echo ""

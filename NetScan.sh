@@ -58,7 +58,7 @@ read -p " $(echo -e $v$shell $nc)" opc
          echo ""
          echo -e "$a$w$v $ip $nc"
          echo -e "$cy"
-         arp-scan -l
+         arp-scan -l | grep -v "Interface:" | grep -v "Starting" | grep -v "packets" | grep -v "Ending" | awk '{print $1}'
          echo -e "$nc"
          echo -e "$a$c$nc"
          echo ""

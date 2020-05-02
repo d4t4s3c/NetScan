@@ -42,10 +42,10 @@ function banner(){
 }
 
 function main(){
-        echo -e "$b[$v$n1$b] Scan ARP   $cy(Active IPs)$nc"
-        echo -e "$b[$v$n2$b] Scan Ports $cy(All 1-65535)$nc"
-        echo -e "$b[$v$n3$b] Scan Ports $cy(Top)$nc"
-        echo -e "$b[$v$n4$b] Scan Ports $cy(Basic 1-5000)$nc"                
+        echo -e "$b[$v$n1$b] Scan ARP  Network $cy(Active    IPs)$nc"
+        echo -e "$b[$v$n2$b] Scan Open Ports   $cy(All   1-65535)$nc"
+        echo -e "$b[$v$n3$b] Scan Open Ports   $cy(Popular Ports)$nc"
+        echo -e "$b[$v$n4$b] Scan Open Ports   $cy(Basic  1-5000)$nc"                
         echo -e "$b[$v$n5$b] Exit"
         echo ""
 }

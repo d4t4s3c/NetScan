@@ -5,19 +5,19 @@ Rapid Scanner, ARP + Ports Status: Open
 
 **Screenshot**
 
-![](/screenshot/001.png)
+![](/screenshot/1.png)
 
 **Scan ARP**
 
-![](/screenshot/A2.png)
+![](/screenshot/2.png)
 
 **Scan Ports**
 
-![](/screenshot/003.png)
+![](/screenshot/3.png)
 
 **CLI Version**
 
-![](/screenshot/0044.png)
+![](/screenshot/4.png)
 
 **Run:**
 ```

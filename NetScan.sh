@@ -82,7 +82,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	 echo ""
 	 echo -e "$a$x$v $ip $nc"
 	 echo -e "$cy"
-	 nmap -n -Pn -sS -p 21,22,23,53,80,88,109,110,137,138,139,443,445,3389 --min-rate 5000 $ip | grep "open"
+	 nmap -n -Pn -sS -p 21,22,23,53,80,88,109,110,137,138,139,443,445,3389,5985 --min-rate 5000 $ip | grep "open"
 	 echo -e "$nc"
 	 echo -e "$a$c$nc"
 	 echo ""

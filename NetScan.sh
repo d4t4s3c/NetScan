@@ -13,7 +13,7 @@ cy="\033[0;96m"
 nc="\e[0m"
 
 #var
-shell=">"
+shell="$"
 n1=1
 n2=2
 n3=3

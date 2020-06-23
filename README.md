@@ -1,5 +1,5 @@
 # NetScan
-Rapid Scanner, ARP + Ports Status: Open
+Rapid Scanner, ARP + TTL + Ports Status: Open
 
 # ONLY USE FOR EDUCATIONAL PURPOSES
 

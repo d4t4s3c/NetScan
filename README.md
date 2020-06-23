@@ -5,15 +5,19 @@ Rapid Scanner, ARP + TTL + Ports Status: Open
 
 **Screenshot**
 
-![](/screenshot/a.png)
+![](/screenshot/00001.png)
 
 **Scan ARP**
 
-![](/screenshot/b.png)
+![](/screenshot/00002.png)
+
+**Scan TTL**
+
+![](/screenshot/00003.png)
 
 **Scan Ports**
 
-![](/screenshot/c.png)
+![](/screenshot/0004.png)
 
 **CLI Version**
 

@@ -99,7 +99,7 @@ function ttl(){
 	    echo ""
 	    exit
     else
-           echo ""
+            echo ""
 	    echo -e "$r$error$nc"
 	    echo ""
 	    sleep 4

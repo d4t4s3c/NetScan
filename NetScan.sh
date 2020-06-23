@@ -29,7 +29,6 @@ in="Invalid Option"
 det="Detected:"
 error="TTL not detected, host dropped or filtered by Firewall/IDS"
 
-
 function banner(){
             echo ""
             echo -e "$b┌═══════════════════════════════════════════════════════════════┐"
@@ -55,7 +54,6 @@ function main(){
             echo -e "$b[$v$n6$b] Exit"
             echo ""
 }
-
 
 function ttl(){
 	    echo ""

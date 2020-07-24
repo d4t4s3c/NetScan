@@ -24,15 +24,14 @@ Rapid Scanner, ARP + TTL + Ports Status: Open
 ![](/screenshot/d.png)
 
 **Run:**
-```
-root@kali:~# git clone https://github.com/d4t4s3c/NetScan.git
 
-root@kali:~# cd NetScan
+``` root@kali:~# git clone https://github.com/d4t4s3c/NetScan.git ```
 
-root@kali:~# chmod +x NetScan.sh
+``` root@kali:~# cd NetScan ```
 
-root@kali:~# ./NetScan.sh
-```
+``` root@kali:~# chmod +x NetScan.sh ```
+
+``` root@kali:~# ./NetScan.sh ```
 
 # NOT BE BAD
 

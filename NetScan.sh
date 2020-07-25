@@ -264,7 +264,6 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo -e "$a$in$nc"
 	    echo ""
 	    sleep 2
-	    banner
 	    main
 	    menu
     fi

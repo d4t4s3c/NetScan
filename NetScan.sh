@@ -94,6 +94,65 @@ function dep2(){
 	    echo ""
     fi
 }
+
+function ttl(){
+	    echo ""
+	    echo -e "$a$z$nc"
+	    echo ""
+	    read ip
+	    echo ""
+	    echo -e "$a$e$v $ip $nc"
+	    comand=$(ping -c 1 $ip | grep "ttl" | awk {'print $6'} | tr -d 'ttl=') > /dev/null 2>&1
+	    echo ""
+    if [ "$(echo $comand)" == "64" ]; then
+	    echo -e "$cy$det TTL=64 (Linux)"
+	    echo ""
+	    echo ""
+	    sleep 4
+	    echo -e "$a$c$nc"
+	    echo ""
+	    echo ""
+	    main
+	    menu
+    elif [ "$(echo $comand)" == "63" ]; then
+            echo -e "$cy$det TTL=63 (Linux)"
+	    echo ""
+	    echo ""
+	    sleep 4
+	    echo -e "$a$c$nc"
+	    echo ""
+	    echo ""
+	    main
+	    menu
+    elif [ "$(echo $comand)" == "128" ]; then
+            echo -e "$cy$det TTL=128 (Windows)"
+	    echo ""
+	    echo ""
+	    sleep 4
+	    echo -e "$a$c$nc"
+	    echo ""
+	    echo ""
+	    main
+	    menu
+    elif [ "$(echo $comand)" == "127" ]; then
+            echo -e "$cy$det TTL=127 (Windows)"
+	    echo ""
+	    echo ""
+	    sleep 4
+	    echo -e "$a$c$nc"
+	    echo ""
+	    echo ""
+	    main
+	    menu
+    else
+            echo ""
+	    echo -e "$r$error$nc"
+	    echo ""
+	    sleep 4
+	    exit
+    fi
+}
+
 function banner(){
             echo ""
             echo -e "$b┌═══════════════════════════════════════════════════════════════┐"
@@ -120,55 +179,6 @@ function main(){
             echo ""
 }
 
-function ttl(){
-	    echo ""
-	    echo -e "$a$z$nc"
-	    echo ""
-	    read ip
-	    echo ""
-	    echo -e "$a$e$v $ip $nc"
-	    comand=$(ping -c 1 $ip | grep "ttl" | awk {'print $6'} | tr -d 'ttl=') > /dev/null 2>&1
-	    echo ""
-    if [ "$(echo $comand)" == "64" ]; then
-	    echo -e "$cy$det TTL=64 (Linux)"
-	    echo ""
-	    echo ""
-	    sleep 4
-	    echo -e "$a$c$nc"
-	    echo ""
-	    exit
-    elif [ "$(echo $comand)" == "63" ]; then
-            echo -e "$cy$det TTL=63 (Linux)"
-	    echo ""
-	    echo ""
-	    sleep 4
-	    echo -e "$a$c$nc"
-	    echo ""
-	    exit
-    elif [ "$(echo $comand)" == "128" ]; then
-            echo -e "$cy$det TTL=128 (Windows)"
-	    echo ""
-	    echo ""
-	    sleep 4
-	    echo -e "$a$c$nc"
-	    echo ""
-	    exit
-    elif [ "$(echo $comand)" == "127" ]; then
-            echo -e "$cy$det TTL=127 (Windows)"
-	    echo ""
-	    echo ""
-	    sleep 4
-	    echo -e "$a$c$nc"
-	    echo ""
-	    exit
-    else
-            echo ""
-	    echo -e "$r$error$nc"
-	    echo ""
-	    sleep 4
-	    exit
-    fi
-}
 
 function menu(){
 
@@ -182,6 +192,9 @@ read -p " $(echo -e $v$shell $nc)" opc
             echo -e "$nc"
             echo -e "$a$c$nc"
             echo ""
+	    echo ""
+	    main
+	    menu
    elif [ $opc -eq 2 ]; then
 	    ttl
    elif [ $opc -eq 3 ]; then
@@ -196,6 +209,9 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo -e "$nc"
 	    echo -e "$a$c$nc"
 	    echo ""
+	    echo ""
+	    main
+	    menu
     elif [ $opc -eq 4 ]; then
             echo ""
 	    echo -e "$a$z$nc"
@@ -208,6 +224,9 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo -e "$nc"
 	    echo -e "$a$c$nc"
 	    echo ""
+	    echo ""
+	    main
+	    menu
     elif [ $opc -eq 5 ]; then
             echo ""
             echo -e "$a$z$nc"
@@ -220,6 +239,9 @@ read -p " $(echo -e $v$shell $nc)" opc
             echo -e "$nc"
             echo -e "$a$c$nc"
             echo ""
+	    echo ""
+	    main
+	    menu
     elif [ $opc -eq 6 ]; then
 	    echo ""
 	    echo ""

@@ -68,12 +68,32 @@ function dep1(){
 	    echo -e "$b installing arp-scan $nc"
 	    sleep 4
 	    echo ""
-	    apt-get install xterm -y > /dev/null 2>&1
-	    echo -e " $b[$v$si$b] xterm installed $nc"
+	    apt-get install arp-scan -y > /dev/null 2>&1
+	    echo -e " $b[$v$si$b] arp-scan installed $nc"
 	    sleep 4
     fi
 }
 
+function dep2(){
+	    which nmap > /dev/null 2>&1
+    if [ "$(echo $?)" == "0" ]; then
+	    echo ""
+	    echo -e " $b[$v$si$b] nmap installed $nc"
+	    sleep 4
+	    echo ""
+    else
+            echo ""
+	    echo -e " $b[$r$no$b] nmap no installed $nc"
+	    sleep 4
+	    echo ""
+	    echo -e "$b installing nmap $nc"
+	    sleep 4
+	    echo ""
+	    apt-get install nmap -y > /dev/null 2>&1
+	    echo -e " $b[$v$si$b] nmap installed $nc"
+	    echo ""
+    fi
+}
 function banner(){
             echo ""
             echo -e "$b┌═══════════════════════════════════════════════════════════════┐"

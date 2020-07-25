@@ -31,6 +31,49 @@ in="Invalid Option"
 det="Detected:"
 error="TTL not detected, host dropped or filtered by Firewall/IDS"
 
+function checkroot(){
+	    echo ""
+	    echo -e "$a check root user $nc"
+	    sleep 4
+    if [ "$(id -u)" == "0" ]; then
+	    echo ""
+	    echo -e " $b[$v$si$b] root $nc"
+	    sleep 4
+	    echo ""
+    else
+            echo ""
+	    echo -e " $b[$r$no$b] root $nc"
+	    sleep 4
+	    echo ""
+	    echo -e "$r EXITING $nc"
+	    sleep 4
+	    echo ""
+	    exit
+    fi	
+}
+
+function dep1(){
+	    echo -e "$a check dependencies $nc"
+	    sleep 4
+	    which arp-scan > /dev/null 2>&1
+    if [ "$(echo $?)" == "0" ]; then
+	    echo ""
+	    echo -e " $b[$v$si$b] arp-scan installed $nc"
+	    sleep 4
+    else
+            echo ""
+	    echo -e " $b[$r$no$b] arp-scan no installed $nc"
+	    sleep 4
+	    echo ""
+	    echo -e "$b installing arp-scan $nc"
+	    sleep 4
+	    echo ""
+	    apt-get install xterm -y > /dev/null 2>&1
+	    echo -e " $b[$v$si$b] xterm installed $nc"
+	    sleep 4
+    fi
+}
+
 function banner(){
             echo ""
             echo -e "$b┌═══════════════════════════════════════════════════════════════┐"
@@ -186,6 +229,9 @@ read -p " $(echo -e $v$shell $nc)" opc
 }
 
 clear
+checkroot
+dep1
+dep2
 banner
 main
 menu

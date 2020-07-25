@@ -14,6 +14,8 @@ nc="\e[0m"
 
 #var
 shell="$"
+si=✔
+no=✘
 n1=1
 n2=2
 n3=3

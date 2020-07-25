@@ -252,6 +252,7 @@ clear
 checkroot
 dep1
 dep2
+clear
 banner
 main
 menu

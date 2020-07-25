@@ -37,7 +37,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 
     if [ $opc -eq 1 ]; then
         echo -e "$cy"
-        arp-scan -l | grep -v "Interface:" | grep -v "Starting" | grep -v "packets" | grep -v "Ending" | awk '{print $1}'
+        arp-scan -l | grep -v -E "Interface:|Starting|packets|Ending" | awk '{print $1}'
         echo -e "$nc"
     elif [ $opc -eq 2 ]; then
 	echo ""

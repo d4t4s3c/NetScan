@@ -1,11 +1,11 @@
 # NetScan
-Scanner: ARP, TTL, Open Ports
+Scanner: **ARP,TTL,Open Ports,Nmap**
 
 # ONLY USE FOR EDUCATIONAL PURPOSES
 
 **Screenshot**
 
-![](/screenshot/00001.png)
+![](/screenshot/screenshot1.png)
 
 **Scan ARP**
 

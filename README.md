@@ -9,7 +9,7 @@ Scanner: **ARP (LAN), TTL (SO), Open Ports (SYN 1-65535), Nmap (-sC -sV 1-65535)
 
 **Scan ARP**
 
-![](/screenshot/00002.png)
+![](/screenshot/screenshot2.png)
 
 **Scan TTL**
 

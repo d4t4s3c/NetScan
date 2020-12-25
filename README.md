@@ -17,11 +17,11 @@ Scanner: **ARP (LAN), TTL (SO), Open Ports (SYN 1-65535), Nmap (-sC -sV 1-65535)
 
 **Scan Open Ports**
 
-![](/screenshot/00004.png)
+![](/screenshot/screenshot4.png)
 
-**CLI Version**
+**Scan Nmap**
 
-![](/screenshot/d.png)
+![](/screenshot/screenshot5.png)
 
 **Run:**
 

@@ -242,7 +242,7 @@ function menu(){
 	main
 	menu
     elif [ $opc -eq 3 ]; then
-	    ttl
+	ttl
     elif [ $opc -eq 4 ]; then
 	echo ""
 	echo -e "$a$v13$nc"

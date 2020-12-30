@@ -25,13 +25,11 @@ Scanner: **ARP (LAN), TTL (SO), Open Ports (SYN 1-65535), Nmap (-sC -sV 1-65535)
 
 **Run:**
 
-``` root@kali:~# git clone https://github.com/d4t4s3c/NetScan.git ```
-
-``` root@kali:~# cd NetScan ```
-
-``` root@kali:~# chmod +x NetScan.sh ```
-
-``` root@kali:~# ./NetScan.sh ```
+```bash
+root@kali:~# git clone https://github.com/d4t4s3c/NetScan.git
+root@kali:~# cd NetScan
+root@kali:~# chmod +x NetScan.sh
+root@kali:~# ./NetScan.sh
+```
 
 # NOT BE BAD
-

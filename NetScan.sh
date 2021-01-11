@@ -266,7 +266,7 @@ function menu(){
         echo ""
         echo -e "$az$cu2 $a$v14$v $ip $nc"
         echo -e "$cy"
-        f1=$(nmap -n -sS -p- --min-rate 5000 192.168.1.1 | grep "open" | awk '{print $1}' | tr -d '/tcp' | xargs | tr " " ",")
+        f1=$(nmap -n -sS -p- --min-rate 5000 $ip | grep "open" | awk '{print $1}' | tr -d '/tcp' | xargs | tr " " ",")
         echo -e "$az$cu2 $a$v15 $v$f1"
         echo ""
         echo -e "$az$cu2 $a$v11"
